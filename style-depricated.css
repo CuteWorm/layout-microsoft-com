@@ -1,3 +1,15 @@
+:root {
+	--main-text-color: black;
+	--minor-text-color: rgba(0, 0, 0, 0.6);
+	--minor-back-color: rgb(242, 242, 242);
+	--link-text-color: #262626;
+	--main-background-color: white;
+	--reverse-text-color: white;
+	--reverse-background-color: black;
+
+	--btn-link-text-color: rgb(0, 103, 184);
+}
+
 html {
 	font-size: 15px;
 }
@@ -10,13 +22,13 @@ html {
 
 body {
 	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-	background-color: white;
-	color: black;
+	background-color: var(--main-background-color);
+	color: var(--main-text-color);
 	line-height: 1.5;
 }
 
 a {
-	color: #262626;
+	color: var(--link-text-color);
 	text-decoration: none;
 }
 
@@ -90,7 +102,7 @@ p {
 	bottom: -3px;
 	width: 100%;
 	display: block;
-	background-color: black;
+	background-color: var(--main-background-color);
 }
 
 /* Dropdown menu */
@@ -104,8 +116,7 @@ p {
 	width: 80vw;
 	position: absolute;
 	font-size: 0.8rem;
-	background-color: rgb(242, 242, 242);
-	color: #616161;
+	background-color: var(--minor-back-color);
 	z-index: 2;
 	transform: translate(-80%);
 	margin-left: 90px;
@@ -292,8 +303,7 @@ section {
 footer {
 	margin-top: 2.5rem;
 	font-size: 0.8rem;
-	background-color: rgb(242, 242, 242);
-	color: #616161;
+	background-color: var(--minor-back-color);
 	padding: 1.5rem 0 1rem 0;
 }
 
@@ -357,9 +367,9 @@ footer {
 
 .btn {
 	display: inline-block;
-	background-color: black;
+	background-color: var(--main-text-color);
 	padding: 0.4rem 1.5rem;
-	color: white;
+	color: var(--main-background-color);
 }
 
 .btn:not(.link) span {
@@ -391,22 +401,22 @@ footer {
 
 .btn.link {
 	background: none;
-	color: rgb(0, 103, 184);
+	color: var(--btn-link-text-color);
 	padding: 0;
 	font-size: 0.9rem;
 	font-weight: 600;
 }
 
 .btn.reverse {
-	background-color: white;
-	color: black;
+	background-color: var(--reverse-background-color);
+	color: var(--reverse-text-color);
 }
 
 /* other styles */
 .reverse {
-	color: white;
+	color: var(--reverse-text-color);
 }
 
 .minor {
-	color: gray;
+	color: var(--minor-text-color);
 }

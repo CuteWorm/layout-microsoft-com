@@ -1,0 +1,334 @@
+
+$main-text-color: black
+$minor-text-color: rgba(0, 0, 0, 0.6)
+$minor-back-color: rgb(242, 242, 242)
+$link-text-color: #262626
+$main-background-color: white
+$reverse-text-color: white
+$reverse-background-color: black
+$btn-link-text-color: rgb(0, 103, 184)
+
+html
+	font-size: 15px
+
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+
+body
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif
+  background-color: $main-background-color
+  color: $main-text-color
+  line-height: 1.5
+
+a
+  color: $link-text-color
+  text-decoration: none
+
+ul
+  list-style: none
+
+h1
+  font-size: 2.5rem
+
+p
+  margin-top: 0.8rem
+
+.container
+  width: 90%
+  margin: 0 auto
+
+.main-nav
+  display: flex
+  align-items: center
+  height: 55px
+  font-size: 13px
+  font-weight: 400
+  font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif
+
+  .logo
+    width: 110px
+
+  > ul
+    display: flex
+
+  ul
+    &.main-menu
+      flex: 1
+      margin-left: 2rem
+
+    &.right-menu > li
+      padding: 1rem
+
+      i
+        margin-left: 3px
+
+    li
+      padding: 0 0.5rem
+
+      a span
+        position: relative
+
+  > ul > li > a
+    line-height: 55px
+    padding: 1.5rem 0.2rem 1.3rem 0.2rem
+    position: relative
+
+  > ul > li > a:not(.sign-in):hover span::before
+    content: ""
+    height: 2px
+    position: absolute
+    left: 0
+    bottom: -3px
+    width: 100%
+    display: block
+    background-color: $main-text-color
+
+
+.item-menu-button
+  position: relative
+
+.item-menu-content
+  display: none
+  width: 80vw
+  position: absolute
+  font-size: 0.8rem
+  background-color: $minor-back-color
+  z-index: 2
+  transform: translate(-80%)
+  margin-left: 90px
+
+.item-menu-button:hover ~ div
+  display: block
+
+.item-menu-content
+  &:hover
+    display: block
+
+  .nav-columns
+    padding: 1rem 2rem
+    border: 1px solid #ddd
+
+
+.show-case
+  height: 485px
+  width: 100%
+
+#showCase1
+  height: 100%
+  background: url(../img/show-case1.jpeg) no-repeat center (center / cover)
+  position: relative
+
+#showCase2
+  height: 100%
+  background: url(../img/show-case2.webp) no-repeat center (center / cover)
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+  align-items: center
+
+#showCase3
+  height: 100%
+  background: url(../img/show-case3.png) no-repeat center (center / cover)
+  position: relative
+
+#showCase1 .show-case-content, #showCase3 .show-case-content
+  width: 35%
+  position: absolute
+  top: 30%
+  left: 5%
+
+#showCase2 .show-case-content
+  text-align: center
+  margin-bottom: 60px
+  width: 40%
+
+.show-case .btn
+  margin-top: 1.5rem
+
+.alert-bar
+  width: 100%
+
+  a
+    border: 1px solid rgb(0, 103, 184)
+    background-color: rgb(0, 103, 184)
+    display: block
+    text-align: center
+    font-size: 13px
+    padding: 8px 0
+    color: white
+    position: relative
+
+    &:hover
+      border: 1px dashed white
+
+      span
+        text-decoration: underline
+
+    &::after
+      content: "\f105"
+      font-family: "Font Awesome 5 Free"
+      font-weight: 900
+      font-size: 1.2em
+      position: relative
+      top: 2px
+      left: 0
+      transition: left 0.2s ease
+
+    &:hover::after
+      left: 5px
+
+
+section
+  margin-top: 2rem
+  padding: 0.5rem 0
+  width: 100%
+
+.options
+  display: flex
+  justify-content: center
+
+  .option
+    width: 160px
+    padding: 0.2rem 0.5rem
+    text-align: center
+
+    &:not(:first-child)
+      margin-left: 20px
+
+    div
+      font-weight: 700
+
+      &:hover
+        text-decoration: underline
+
+
+.home-cards
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr 1fr
+  grid-gap: 2rem
+
+.card
+  .card-img
+    width: 100%
+
+  .card-title
+    margin-top: 1rem
+    font-weight: 700
+    font-size: 1.2rem
+
+  .card-desc
+
+  .btn
+    margin-top: 1rem
+
+
+.follow ul
+  position: relative
+  top: 6px
+  display: inline-block
+
+  li
+    display: inline-block
+    margin-left: 10px
+
+    i
+      font-size: 2rem
+
+footer
+  margin-top: 2.5rem
+  font-size: 0.8rem
+  background-color: $minor-back-color
+  padding: 1.5rem 0 1rem 0
+
+.nav-columns
+  display: flex
+  justify-content: space-between
+
+.column .column-header
+  font-weight: bold
+  font-size: 1rem !important
+
+.nav-columns .column
+  ul li
+    padding: 0.5rem 1rem
+
+  &:first-child ul li, &:last-child ul li
+    padding-left: 0
+
+
+.bottom-nav
+  display: flex
+  align-items: center
+
+  .languages
+    flex: 1
+
+    a
+      padding-left: 30px
+      position: relative
+
+    i
+      font-size: 2rem
+      margin-right: 5px
+      position: absolute
+      top: -8px
+      left: -7px
+
+.bottom-right-nav ul
+  display: flex
+
+  li
+    padding: 0.2rem 1rem
+
+.nav-columns a:hover, .bottom-nav a:hover
+  text-decoration: underline
+
+.btn
+  display: inline-block
+  background-color: $main-text-color
+  padding: 0.4rem 1.5rem
+  color: $main-background-color
+
+  &:not(.link) span
+    position: relative
+    right: 0
+    transition: right 0.2s ease
+
+  &::after
+    content: "\f105"
+    font-family: "Font Awesome 5 Free"
+    font-weight: 900
+    font-size: 1.2em
+    margin-left: 8px
+    position: relative
+    top: 2px
+    left: 0
+    transition: left 0.2s ease
+
+  &:hover
+    span
+      text-decoration: underline
+      right: 2px
+
+    &::after
+      left: 3px
+
+  &.link
+    background: none
+    color: $btn-link-text-color
+    padding: 0
+    font-size: 0.9rem
+    font-weight: 600
+
+  &.reverse
+    background-color: $reverse-background-color
+    color: $reverse-text-color
+
+
+.reverse
+  color: $reverse-text-color
+
+.minor
+  color: $minor-text-color
