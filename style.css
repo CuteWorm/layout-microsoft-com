@@ -1,0 +1,412 @@
+html {
+	font-size: 15px;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	background-color: white;
+	color: black;
+	line-height: 1.5;
+}
+
+a {
+	color: #262626;
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+h1 {
+	font-size: 2.5rem;
+}
+
+p {
+	margin-top: 0.8rem;
+}
+
+.container {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.main-nav {
+	display: flex;
+	align-items: center;
+	height: 55px;
+	font-size: 13px;
+	font-weight: 400;
+	font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial,
+		sans-serif;
+}
+
+.main-nav .logo {
+	width: 110px;
+}
+
+.main-nav > ul {
+	display: flex;
+}
+
+.main-nav ul.main-menu {
+	flex: 1;
+	margin-left: 2rem;
+}
+
+.main-nav ul.right-menu > li {
+	padding: 1rem;
+}
+
+.main-nav ul.right-menu > li i {
+	margin-left: 3px;
+}
+
+.main-nav ul li {
+	padding: 0 0.5rem;
+}
+
+.main-nav > ul > li > a {
+	line-height: 55px;
+	padding: 1.5rem 0.2rem 1.3rem 0.2rem;
+	position: relative;
+}
+
+.main-nav ul li a span {
+	position: relative;
+}
+
+.main-nav > ul > li > a:not(.sign-in):hover span::before {
+	content: "";
+	height: 2px;
+	position: absolute;
+	left: 0;
+	bottom: -3px;
+	width: 100%;
+	display: block;
+	background-color: black;
+}
+
+/* Dropdown menu */
+
+.item-menu-button {
+	position: relative;
+}
+
+.item-menu-content {
+	display: none;
+	width: 80vw;
+	position: absolute;
+	font-size: 0.8rem;
+	background-color: rgb(242, 242, 242);
+	color: #616161;
+	z-index: 2;
+	transform: translate(-80%);
+	margin-left: 90px;
+}
+
+.item-menu-button:hover ~ div {
+	display: block;
+}
+
+.item-menu-content:hover {
+	display: block;
+}
+
+.item-menu-content .nav-columns {
+	padding: 1rem 2rem;
+	border: 1px solid #ddd;
+}
+
+/* Show case */
+
+.show-case {
+	height: 485px;
+	width: 100%;
+}
+
+#showCase1 {
+	height: 100%;
+	background: url(/img/show-case1.jpeg) no-repeat center center/cover;
+	position: relative;
+}
+
+#showCase2 {
+	height: 100%;
+	background: url(/img/show-case2.webp) no-repeat center center/cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+#showCase3 {
+	height: 100%;
+	background: url(/img/show-case3.png) no-repeat center center/cover;
+	position: relative;
+}
+
+#showCase1 .show-case-content,
+#showCase3 .show-case-content {
+	width: 35%;
+	position: absolute;
+	top: 30%;
+	left: 5%;
+}
+
+#showCase2 .show-case-content {
+	text-align: center;
+	margin-bottom: 60px;
+	width: 40%;
+}
+
+.show-case .btn {
+	margin-top: 1.5rem;
+}
+
+.alert-bar {
+	width: 100%;
+}
+
+.alert-bar a {
+	border: 1px solid rgb(0, 103, 184);
+	background-color: rgb(0, 103, 184);
+	display: block;
+	text-align: center;
+	font-size: 13px;
+	padding: 8px 0;
+	color: white;
+	position: relative;
+}
+
+.alert-bar a:hover {
+	border: 1px dashed white;
+}
+
+.alert-bar a:hover span {
+	text-decoration: underline;
+}
+
+.alert-bar a::after {
+	content: "\f105";
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	font-size: 1.2em;
+	position: relative;
+	top: 2px;
+	left: 0;
+	transition: left 0.2s ease;
+}
+
+.alert-bar a:hover::after {
+	left: 5px;
+}
+
+/* Options */
+
+section {
+	margin-top: 2rem;
+	padding: 0.5rem 0;
+	width: 100%;
+}
+
+.options {
+	display: flex;
+	justify-content: center;
+}
+
+.options .option {
+	width: 160px;
+	padding: 0.2rem 0.5rem;
+	text-align: center;
+}
+
+.options .option:not(:first-child) {
+	margin-left: 20px;
+}
+
+.options .option div {
+	font-weight: 700;
+}
+
+.options .option div:hover {
+	text-decoration: underline;
+}
+
+/* Home cards */
+
+.home-cards {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-gap: 2rem;
+}
+
+.card {
+}
+
+.card .card-img {
+	width: 100%;
+}
+
+.card .card-title {
+	margin-top: 1rem;
+	font-weight: 700;
+	font-size: 1.2rem;
+}
+
+.card .card-desc {
+}
+
+.card .btn {
+	margin-top: 1rem;
+}
+
+/* Follow */
+
+.follow ul {
+	position: relative;
+	top: 6px;
+}
+
+.follow ul,
+.follow ul li {
+	display: inline-block;
+}
+
+.follow ul li {
+	margin-left: 10px;
+}
+
+.follow ul li i {
+	font-size: 2rem;
+}
+
+/* Footer */
+
+footer {
+	margin-top: 2.5rem;
+	font-size: 0.8rem;
+	background-color: rgb(242, 242, 242);
+	color: #616161;
+	padding: 1.5rem 0 1rem 0;
+}
+
+.nav-columns {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column .column-header {
+	font-weight: bold;
+	font-size: 1rem !important;
+}
+
+.nav-columns .column ul li {
+	padding: 0.5rem 1rem;
+}
+
+.nav-columns .column:first-child ul li,
+.nav-columns .column:last-child ul li {
+	padding-left: 0;
+}
+
+/* Bottom nav */
+
+.bottom-nav {
+	display: flex;
+	align-items: center;
+}
+
+.bottom-nav .languages {
+	flex: 1;
+}
+
+.bottom-nav .languages a {
+	padding-left: 30px;
+	position: relative;
+}
+
+.bottom-nav .languages i {
+	font-size: 2rem;
+	margin-right: 5px;
+	position: absolute;
+	top: -8px;
+	left: -7px;
+}
+
+.bottom-right-nav ul {
+	display: flex;
+}
+
+.bottom-right-nav ul li {
+	padding: 0.2rem 1rem;
+}
+
+.nav-columns a:hover,
+.bottom-nav a:hover {
+	text-decoration: underline;
+}
+
+/* Button */
+
+.btn {
+	display: inline-block;
+	background-color: black;
+	padding: 0.4rem 1.5rem;
+	color: white;
+}
+
+.btn:not(.link) span {
+	position: relative;
+	right: 0;
+	transition: right 0.2s ease;
+}
+
+.btn::after {
+	content: "\f105";
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	font-size: 1.2em;
+	margin-left: 8px;
+	position: relative;
+	top: 2px;
+	left: 0;
+	transition: left 0.2s ease;
+}
+
+.btn:hover span {
+	text-decoration: underline;
+	right: 2px;
+}
+
+.btn:hover::after {
+	left: 3px;
+}
+
+.btn.link {
+	background: none;
+	color: rgb(0, 103, 184);
+	padding: 0;
+	font-size: 0.9rem;
+	font-weight: 600;
+}
+
+.btn.reverse {
+	background-color: white;
+	color: black;
+}
+
+/* other styles */
+.reverse {
+	color: white;
+}
+
+.minor {
+	color: gray;
+}

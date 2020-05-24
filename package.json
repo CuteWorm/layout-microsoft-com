@@ -1,0 +1,21 @@
+{
+  "name": "layout-microsoftcom",
+  "version": "1.0.0",
+  "description": "Layout the homepage of microsoft.net with flexbox, grid, transition and more",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "layout-microsoft-com"
+  },
+  "keywords": [
+    "layout",
+    "flexbox",
+    "grid",
+    "transition"
+  ],
+  "author": "Nam Bui",
+  "license": "ISC"
+}
